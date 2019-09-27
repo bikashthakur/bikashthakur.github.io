@@ -1,0 +1,230 @@
+
+#footer {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#footer .container {
+    height: 100%;
+    width: 100%;
+}
+
+#bg-meadow-content {
+    background-position: 50% 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transform: scale3d(2,2,2);
+    -webkit-transition: all .66s ease-in-out;
+    -webkit-filter: blur(4px) grayscale(0);
+    -webkit-transition-property: opacity, -webkit-filter, -webkit-transform;
+    -webkit-transition-delay: .33s;
+    transform: scale3d(2,2,2);
+    filter: blur(4px) grayscale(0);
+    transition: all .66s ease-in-out;
+    transition-property: opacity, filter, transform
+}
+
+#bg-meadow-content {
+    opacity:1;
+    -webkit-filter:blur(0);
+    filter:blur(0);
+    -webkit-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1);
+}
+
+#bg-meadow, #bg-sprite-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:auto;
+    height:100%;
+    max-width:none;
+    -webkit-transform:translate3d(0%,0,0);
+    transform:translate3d(0%,0,0)
+}
+
+#sprite-wrapper {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+
+.background.no_transition #bg-meadow-content {
+    -webkit-transition:none;
+    transition:none
+}
+
+.background.window_blurred #bg-meadow-content, .background.window_blurred .sprite {
+    -webkit-filter:blur(0) grayscale(1);
+    filter:blur(0) grayscale(1);
+}
+
+.sprite {
+    position:absolute;
+    -webkit-transform:scale3d(.5,.5,.5);
+    -webkit-transition:opacity, -webkit-filter .5s ease-out;
+    -webkit-transition-property:opacity, -webkit-filter;
+    transform:scale3d(.5,.5,.5);
+    transition:opacity, -webkit-filter .5s ease-out;
+    transition-property:opacity, filter
+}
+.sprite.flipped {
+    -webkit-transform:scale3d(.5,.5,.5) scaleX(-1);
+    -webkit-transition-property:opacity, -webkit-filter;
+    transform:scale3d(.5,.5,.5) scaleX(-1);
+    transition-property:opacity, filter
+}
+
+.butterfly_angle {
+    width:70px;
+    height:65px;
+    top:72px;
+    background:url(../image/b/butterfly-angle.png) no-repeat;
+}
+.butterfly_angle_1 {
+    width:70px;
+    height:65px;
+    top:96px;
+    background:url(../image/b/butterfly-angle-1.png) no-repeat
+}
+.butterfly_angle.bottom {top:45%}
+.butterfly_angle_1.bottom {top:65%}
+.butterfly_side {
+    width:70px;
+    height:65px;
+    top:192px;
+    background:url(../image/b/butterfly-side.png) no-repeat
+}
+.butterfly_side.bottom {top:50%}
+.butterfly_rooked {
+    width:70px;
+    height:65px;
+    top:128px;
+    background:url(../image/b/butterfly-rooked.png) no-repeat
+}
+.butterfly_rooked.bottom {top:33%}
+.butterfly_angle_lr {
+    -webkit-animation:anim 1s steps(19) infinite,movelr 35s linear infinite,sine 4.5s ease alternate infinite;
+    animation:anim 1s steps(19) infinite,movelr 35s linear infinite,sine 4.5s ease alternate infinite
+}
+.butterfly_angle_rl {
+    -webkit-animation:anim 1s steps(19) infinite,movelr 35s linear reverse infinite,sine 4.5s ease alternate infinite;
+    animation:anim 1s steps(19) infinite,movelr 35s linear reverse infinite,sine 4.5s ease alternate infinite
+}
+.butterfly_angle_1_lr {
+    -webkit-animation:anim 2s steps(33) infinite,movelr 33s linear infinite,sine 3.5s ease alternate infinite;
+    animation:anim 2s steps(33) infinite,movelr 33s linear infinite,sine 3.5s ease alternate infinite
+}
+.butterfly_angle_1_rl {
+    -webkit-animation:anim 2s steps(33) infinite,movelr 33s linear reverse infinite,sine 4.5s ease alternate infinite;
+    animation:anim 2s steps(33) infinite,movelr 33s linear reverse infinite,sine 4.5s ease alternate infinite
+}
+.butterfly_side_lr {
+    -webkit-animation:anim .5s steps(13) infinite,movelr 30s linear infinite,sine 3s ease alternate infinite;
+    animation:anim .5s steps(13) infinite,movelr 30s linear infinite,sine 3s ease alternate infinite
+}
+.butterfly_side_rl {
+    -webkit-animation:anim .5s steps(13) infinite,movelr 30s linear reverse infinite,sine 3s ease alternate infinite;
+    animation:anim .5s steps(13) infinite,movelr 30s linear reverse infinite,sine 3s ease alternate infinite
+}
+.butterfly_rooked_lr {
+    -webkit-animation:anim .5s steps(13) infinite,movelr 25s linear infinite,sine 5.5s ease alternate infinite;
+    animation:anim .5s steps(13) infinite,movelr 25s linear infinite,sine 5.5s ease alternate infinite
+}
+.butterfly_rooked_rl {
+    -webkit-animation:anim .5s steps(13) infinite,movelr 25s linear reverse infinite,sine 5.5s ease alternate infinite;
+    animation:anim .5s steps(13) infinite,movelr 25s linear reverse infinite,sine 5.5s ease alternate infinite
+}
+
+@-webkit-keyframes sine {
+    from {margin-top:-64px}
+    to {margin-top:64px}
+}
+@keyframes sine {
+    from {margin-top:-64px}
+    to {margin-top:64px}
+}
+
+@-webkit-keyframes movelr {
+    from {left:-2%}
+    to {left:101%}
+}
+@keyframes movelr {
+    from {left:-2%}
+    to {left:101%}
+}
+@-webkit-keyframes anim {
+    from {background-position:0 0}
+    to {background-position:100% 0}
+}
+@keyframes anim {
+    from {background-position:0 0}
+    to {background-position:100% 0}
+}
+
+#home .content {
+    background: #1976D2;
+    background: url(../image/frame.png), linear-gradient(135deg, #FF9800, #00796B);
+    box-shadow: 0 30px 50px -20px #212121;
+    display: inline-block;
+    left: 25%;
+    top: 25%;
+    opacity: 0.67;
+    position: relative;
+    width: 450px;
+}
+
+/*text animation*/
+
+svg.intro {
+    
+}
+svg.intro .text {
+    display: none;
+}
+svg.intro.go .text {
+    font-family: Nunito, Roboto, sans-serif;
+    font-size: 16px;
+    display: block;
+}
+svg.intro.go .text.code {
+    font-size: 0.667em;
+}
+svg.intro.go .text-stroke {
+    fill: none;
+    stroke: #f6bdfa;
+    stroke-width: 2.8px;
+    stroke-dashoffset: -900;
+    stroke-dasharray: 900;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    animation: dash 2.5s ease-in-out forwards;
+}
+svg.intro.go .text-stroke:nth-child(2) {
+    animation-delay: 0.3s;
+}
+svg.intro.go .text-stroke:nth-child(3) {
+    animation-delay: 0.9s;
+}
+svg.intro.go .text-stroke-2 {
+    stroke: #51256f;
+    animation-delay: 1.2s;
+}
+svg.intro.go .text-stroke:nth-child(5) {
+    animation-delay: 1.5s;
+}
+svg.intro.go .text-stroke:nth-child(6) {
+    animation-delay: 1.8s;
+}
+
+@keyframes dash {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

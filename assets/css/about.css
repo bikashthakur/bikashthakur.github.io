@@ -1,0 +1,451 @@
+
+.about > .container {
+    /* background: url(../img/b/net.png);
+    background-size: cover;
+    background-position: 50% 50%; */
+}
+
+#about .content .main {
+    background: linear-gradient(75deg, #E1F5FE 35%, #fff 0);
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 3px 9px #f0f0f0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#info-book {
+    background: #4b6cb7;
+    border-radius: 4px;
+    height: 432px;
+    width: 320px;
+    margin: 32px auto;
+    position: relative;
+}
+
+#info-book {
+    box-shadow: 2px 2px 0px 2px #00796B;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    transition: transform 0.9s 0.1s cubic-bezier(0.15, 1.5, 0.85, 0.58);
+}
+
+#info-book.rotate {
+    overflow: visible;
+    transform: translateX(50%) rotate(-5deg);
+}
+
+#info-book .page {
+    border-radius: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#info-book .page {
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    transition: transform 0.9s 0.1s cubic-bezier(0.15, 1.5, 0.85, 0.58);
+}
+
+#info-book .page .page--content {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+#info-book .page.page--profile .page--content, #info-book .page.page--desc .page--content {
+    border-radius: 4px;
+    height: 100%;
+}
+
+#info-book .page--front {
+    background: url(../image/bt010.png) no-repeat #0d47a1;
+    /*
+    background: url(../image/bag08.png) no-repeat, -webkit-linear-gradient(to right, #182848, #0d47a1);
+    background: url(../image/bag__transparent033.png) no-repeat, linear-gradient(to right, #182848, #0d47a1);
+    */
+    background-size: 50% auto, 100%;
+    background-position: 50% 40%;
+    box-shadow: 2px 2px 0px 2px #1A237E;
+    position: relative;
+    z-index: 1003;
+}
+
+#info-book .page--front {
+    transform-origin: left;
+}
+#info-book.rotate .page--front {
+    transform: rotateY(-170deg);
+}
+
+#info-book .page--front .page--content {
+    top: 75%;
+}
+
+#info-book .page--front .btn-element {
+    padding: 8px;
+    position: relative;
+}
+
+#btnOpenTheBook {
+    background: #FF9800;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF9800, #FF6F00);
+    background: linear-gradient(to right, #FF9800, #FF6F00);
+    border-radius: 32px;
+    /*color: #083658;*/
+    color: #212121;
+    display: inline-block;
+    font-weight: 700;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+#btnOpenTheBook {
+    box-shadow: -2px 2px 0px 2px #1A237E;
+    transition: background 1s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+#btnOpenTheBook:hover {
+    background: #ff8f00;  /* fallback for old browsers */
+}
+#btnOpenTheBook:hover {
+    background: -webkit-linear-gradient(to right, #FF6F00, #FF9800);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF6F00, #FF9800);
+    box-shadow: -3px 7px 11px #181818;
+    transition: background 1s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+#info-book .page--profile {
+    /*background: #7dcc93;
+    background: #1cdba2;*/
+    background: url(../image/bt_stroke.png) no-repeat;
+    background-position: center;
+    box-shadow: 2px 2px 0px 2px #00796B;
+    z-index: 1002;
+}
+#info-book .page--profile {
+    transform-origin: left;
+}
+
+#info-book.rotate .page--profile {
+    transform: rotateY(-170deg);
+}
+
+#info-book .page--profile .page--content {
+    background: #7dcc93;
+    background: #1cdba2;
+    background: #12baa6;
+}
+#info-book .page--profile .page--content {
+    transition: transform 0.001s 0.5s ease-in-out;
+}
+
+#info-book.rotate .page--profile .page--content {
+    transform: rotateY(180deg);
+    transition: transform 0.001s ease-in-out;
+}
+
+#info-book .page--profile .img-avatar {
+    background: #4b6cb7;
+    background: #0d47a1;
+    border-radius: 4px;
+    height: 150px;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 24px;
+    position: relative;
+}
+#info-book .page--profile .img-avatar {
+    background: -webkit-linear-gradient(to right, #1A237E, #0D47A1);
+    background: linear-gradient(to right, #1A237E, #0D47A1);
+    transition: border-color 0.15s 0.35s ease-in-out, box-shadow 0.25s 0.25s ease-in-out;
+}
+
+#info-book.rotate .page--profile .img-avatar {
+    box-shadow: 2px 2px 0px 2px #00796B;
+}
+
+#info-book .page--profile .img-avatar img {
+    border: 2px solid #ff9800;
+    border-radius: 3px;
+    height: 100px;
+    width: auto;
+    left: 0;
+    top: 45%;
+    position: relative;
+}
+
+#info-book .page--profile .img-avatar.canimate img {
+    opacity: 0;
+    top: 0;
+    visibility: hidden;
+}
+#info-book .page--profile .img-avatar.canimate img {
+    transform: translate(-100%, 0%) scale(0.5);
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s 0.4s ease-in-out, opacity 0.1s 0.4s ease-in-out, visibility 0.1s 1s ease-in-out;
+}
+
+#info-book.rotate .page--profile .img-avatar.canimate img {
+    opacity: 1;
+    visibility: visible;
+}
+#info-book.rotate .page--profile .img-avatar.canimate img {
+    box-shadow: 1px 3px 13px rgba(0, 0, 0, 0.5);
+    transform: translate(0%, 50%) scale(1);
+    transition: box-shadow 0.3s 0.2s ease-in-out, transform 0.3s 0.2s ease-in-out, opacity 0.3s 0.2s ease-in-out, visibility 0.1s 0.1s ease-in-out;
+}
+
+#info-book .page--profile .img-avatar img:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#info-book .page--profile .img-avatar span.close-book {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #e5e5e5;
+    cursor: pointer;
+    /*display: none;*/
+    font-size: 18px;
+    line-height: 18px;
+    padding: 4px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+#info-book .page--profile .img-avatar span.close-book {
+    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+ #info-book .page--profile .img-avatar span.close-book:hover {
+    border-color: #00ffff;
+    box-shadow: 1px 1px 3px #b1b1b1;
+    color: #fff;
+}
+
+#info-book .page--profile .info {
+    padding: 0 16px 16px;
+}
+
+#info-book .page--profile .info .info--about p {
+    font-size: 1.1357em;
+    line-height: 1.67em;
+    text-align: center;
+}
+
+#info-book .page--profile .info .info--about .highlight {
+    color: #1A237E;
+    font-size: 1.167em;
+    margin-left: 4px;
+    text-shadow: -1px 2px 5px #b1b1b1;
+}
+
+#info-book .page--profile .info .contact {
+    margin-top: 12px;
+    position: relative;
+}
+
+#info-book .page--profile .info .contact .email, #info-book .page--profile .info .contact .cell {
+    border-radius: 16px;
+    box-shadow: -1px 1px 0px 1px #00796B;
+}
+
+#info-book .page--profile .info .contact .email {
+    margin-bottom: 8px;
+}
+
+#info-book .page--profile .info .contact .icon {
+    background: #009688;
+    border: 4px solid #009688;
+    border-radius: 50%;
+    box-shadow: 1px 1px 0px 2px #00796B;
+    display: inline-block;
+    height: 32px;
+    position: relative;
+    top: -1px;
+    width: 32px;
+}
+#info-book .page--profile .info .contact .nav .icon {
+    background: none;
+    border: none;
+    width: 100%;
+}
+#info-book .page--profile .info .contact .icon img {
+    height: 100%;
+    width: auto;
+}
+#info-book .page--profile .info .contact .text {
+    display: inline-block;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-left: 6px;
+    padding: 4px;
+    width: auto;
+    text-shadow: -1px 2px 5px #b1b1b1;
+}
+
+/*page navigation*/
+
+#info-book .page .nav {
+    display: none;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+}
+#info-book .page .nav.show {
+    display: inline-block
+}
+#info-book .page.page--profile .nav {
+    right: 1px;
+    bottom: 1px;
+}
+#info-book .page.page--desc .nav {
+    bottom: 8px;
+    left: 25%;
+    width: 50%;
+}
+
+#info-book .page .page-toggle {
+    background-color: #ff8f00;
+    border-radius: 16px;
+    color: transparent;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#info-book .page .page-toggle {
+    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+#info-book .page .page-toggle:hover {
+    background-color: #ff6f00;
+    border-color: #009688;
+    box-shadow: -2px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.no-csstransforms3d #info-book .page--profile .info .page-toggle {
+    border-radius: 16px;
+    bottom: 23px;
+    right: 16px;
+}
+
+#info-book .page .page-toggle .icon {
+    background: none;
+    border: 1px solid transparent;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+#info-book .page .page-toggle .icon img {
+    height: 100%;
+    width: auto;
+}
+
+/*END*/
+
+#info-book .page--desc {
+    background: #fff;
+    background: url(../image/bt_stroke.png), #fff;
+    background-size: 50%, 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset -1px -1px 9px 1px #ccc;
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    z-index: 1001;
+}
+
+#info-book .page--desc .page--content .info {
+	padding: 12px;
+    /*position: absolute;
+    top: 0;*/
+}
+
+#info-book .page--desc .page--content .info p.text {
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.34em;
+    text-align: justify;
+    text-indent: 1em;
+}
+
+@media(max-width:880px) {
+    #info-book {
+        height: 440px;
+        width: 280px;
+    }
+    #btnOpenTheBook {
+        padding-bottom: 12px;
+        padding-top: 12px;
+    }
+    #info-book .page--profile .img-avatar img {
+        height: 85px;
+        top: 55%;
+    }
+    #info-book.rotate .page--profile .img-avatar.canimate img {
+        transform: translate(0%, 75%) scale(1);
+    }
+    #info-book .page--profile .info .info--about p {
+        font-size: 1em;
+    }
+    
+    #info-book .page--profile .info .contact {
+        margin-top: 16px;
+    }
+    #info-book .page--profile .info .contact .email {
+        margin-bottom: 12px;
+    }
+    #info-book .page--profile .info .contact .text {
+        font-size: 0.95em;
+        letter-spacing: 0;
+        margin-left: 2px;
+    }
+    /*#info-book .page.page--profile .nav {
+        bottom: 38px;
+    }*/
+    
+    #info-book .page--desc .page--content .info p.text {
+        font-size: 0.95em;
+    }
+}
+
+@media(max-width:700px) {
+    #info-book {
+        width: 250px;
+        perspective: 1200px;
+    }
+    
+    #info-book .page--profile .img-avatar {
+        
+    }
+    
+    #info-book .page--profile .info .contact .icon {
+        border: 3px solid #009688;
+        box-shadow: 1px 1px 0px 1px #00796B;
+        height: 28px;
+        width: 28px;
+    }
+    
+    #info-book .page--profile .info {
+        padding: 12px 6px;
+    }
+    #info-book .page--profile .info .contact .text {
+        line-height: 20px;
+    }
+    
+    #info-book .page--desc .page--content .info p.text {
+        font-size: 0.9em;
+    }
+}
+
+@media(max-width:600px) {
+    #about .content .main {
+        overflow-x: auto;
+    }
+    #info-book.rotate {
+        overflow: auto;
+        transform: translateX(100%) rotate(-5deg);
+    }
+}

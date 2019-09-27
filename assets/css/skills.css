@@ -1,0 +1,230 @@
+#skills {
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+#skills .content .main {
+    background: linear-gradient(75deg, #E1F5FE 35%, #fff 0);
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 3px 9px #f0f0f0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+#skills .main .list .dev ul, #skills .main .list .tools ul {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#skills .main .list .tools ul {
+    margin-left: 80px;
+}
+
+#skills .main .list h2.heading {
+    padding: 0px 16px 16px;
+}
+
+#skills .main .list h2.heading .span-text {
+    line-height: 64px;
+    padding-left: 8px;
+}
+
+#skills .main .list .span-img {
+    border: 1px solid #00838f;
+    background: #009688;
+    border-radius: 50%;
+    box-shadow: 0px 2px 0px 2px #00796B;
+    height: 64px;
+    width: auto;
+    transition: all 0.4s 0.1s;
+}
+
+#skills .main .list .span-img img {
+    height: 100%;
+    width: auto;
+}
+
+#skills .dev ul li {
+    background: #0d47a1;
+    /*backface-visibility: hidden;*/
+    border: 1px solid transparent;
+    border-radius: 50%;
+    /*border: 2px solid rgba(255,183,33,.5);*/
+    box-shadow: 0px 2px 0px 2px #00838f;
+    color: #e5e5e5;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 90px;
+    padding: 0;
+    margin: 10px 10px 10px 0;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+#skills .dev ul li .element {
+    display: inline-block;
+    transition: transform 0.1s 0.25s ease-in-out;
+}
+#skills .dev ul li:hover {
+    transform: rotateY(-180deg);
+    box-shadow: -3px 5px 9px #010101;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+#skills .dev ul li:hover .element {
+    transform: rotateY(180deg);
+    transition: transform 0.1s 0.25s ease-in-out;
+}
+
+#skills .tools ul li {
+    color: #424242;
+    display: block;
+    font-size: 1em;
+    padding: 7px 12px;
+    text-align: left;
+}
+
+#skills .tools ul li span {
+    background: #ff9800;
+    border: 1px solid #ddd;
+    box-shadow: -2px 2px 3px #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 7px;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    top: 2px;
+}
+#skills .separator {
+    position: absolute;
+    width: 1px;
+    background: #e5e5e5;
+    height: 60%;
+    top: 33%;
+    left: 50%;
+}
+
+@media(min-width: 880px) {
+    #skills .main {
+        /*
+        margin-left: 7%;
+        */
+    }
+
+}
+
+@media(max-width: 880px) {
+    
+    #skills .main .list h2.heading {
+        font-size: 1.3987498879em;
+    }
+    
+    #skills .dev {
+        padding-left: 32px;
+    }
+    
+    #skills .main .list .dev ul, #skills .main .list .tools ul {
+        max-width: 350px;
+    }
+    
+    #skills .dev ul li {
+        line-height: 80px;
+        padding: 0;
+        height: 80px;
+        width: 80px;
+    }
+    
+    #skills .separator {
+        left: 52.5%;
+    }
+    
+}
+
+@media(max-width: 768px) {
+    
+    #skills {
+        
+    }
+    #skills .main .list {
+        display: block;
+        width: 100%;
+    }
+    
+    #skills .tools {
+        padding-left: 32px;
+    }
+    
+    #skills .main .list .dev ul {
+        margin-left: 12%;
+    }
+    
+    #skills .dev ul li {
+        line-height: 90px;
+        padding: 0;
+        height: 90px;
+        width: 90px;
+    }
+    
+    #skills .main .list .tools {
+        margin-top: 30px;
+    }
+    
+    #skills .separator {
+        display: inline-block;
+        height: 1px;
+        width: 60%;
+        position: relative;
+        left: 0;
+        top: 10px;
+    }
+}
+
+@media(max-width: 480px) {
+    
+    #skills {
+        
+    }
+    #skills .main .list {
+        display: block;
+        width: 100%;
+    }
+    
+    #skills .dev, #skills .tools {
+        padding-left: 16px;
+    }
+    
+    #skills .main .list .dev ul {
+        margin-left: auto;
+    }
+    
+    #skills .main .list .tools ul {
+        margin-left: 40px;
+    }
+    
+    #skills .dev ul li {
+        line-height: 80px;
+        padding: 0;
+        height: 80px;
+        width: 80px;
+    }
+    
+    #skills .main .list h2.heading {
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 1.167em;
+    }
+    
+    #skills .main .list .span-img {
+        height: 40px;
+    }
+    
+    #skills .main .list h2.heading .span-text {
+        line-height: 40px;
+    }
+    
+}
